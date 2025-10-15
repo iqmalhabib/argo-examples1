@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pokeball-vue3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pokeball-vue3
+  template:
+    metadata:
+      labels:
+        app: pokeball-vue3
+    spec:
+      containers:
+        - name: pokeball-vue3
+          image: iqmal1999/pokeball-vue3:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
