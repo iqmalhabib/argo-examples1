@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: pokeball-vue3
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: pokeball-vue3
   ports:
