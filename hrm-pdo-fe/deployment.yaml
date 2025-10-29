@@ -5,7 +5,7 @@ metadata:
   labels:
     app: hrmis-pdo-fe
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: hrmis-pdo-fe
