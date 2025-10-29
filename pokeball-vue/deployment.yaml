@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: pokeball-vue3
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: pokeball-vue3
