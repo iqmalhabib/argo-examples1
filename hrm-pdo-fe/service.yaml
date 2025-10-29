@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hrmis-pdo-fe-service
+spec:
+  selector:
+    app: hrmis-pdo-fe
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+      nodePort: 31000 # Specify the NodePort here
+  type: NodePort

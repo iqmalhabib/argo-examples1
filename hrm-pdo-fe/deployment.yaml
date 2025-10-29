@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hrmis-pdo-fe-deployment
+  labels:
+    app: hrmis-pdo-fe
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hrmis-pdo-fe
+  template:
+    metadata:
+      labels:
+        app: hrmis-pdo-fe
+    spec:
+      containers:
+      - name: hrmis-pdo-fe
+        image: 172.22.117.167:30002/pdo/pdo_fe:v1 # <-- IMPORTANT: UPDATE THIS
+        ports:
+        - containerPort: 3000
+
+
